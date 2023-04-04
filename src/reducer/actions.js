@@ -20,3 +20,10 @@ export const checkRow = (pegs) => {
         payload : pegs
     }
 }
+
+export const setGameState = (gameState) => {
+    return {
+        type: actionTypes.SET_GAME_STATE,
+        payload : gameState
+    }
+}

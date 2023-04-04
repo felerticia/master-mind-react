@@ -33,3 +33,16 @@ export const getHints = (secret,row) => {
 
     return new Array(4).fill('').map((x,i) => hints[i] || '') 
 }
+
+export const checkGameState = (hints,row) => {
+    if(row === -1)
+        return ''
+
+    if (row === 9 && hints[row].some(x => x !== 'black'))
+        return 'lost'
+
+    if (hints[row].every(x => x === 'black'))
+        return 'won'
+
+    return ''
+}
