@@ -1,10 +1,11 @@
 import './Buttons.css'
 import Check from './Check'
+import NewGame from './NewGame'
 
 const Buttons = () => {
     return <div className="Buttons">
         <Check/>
-        <button className="Button">New Game</button> 
+        <NewGame/>
     </div> 
 }
 
