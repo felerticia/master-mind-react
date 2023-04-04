@@ -1,8 +1,10 @@
 import './Circle.css'
-const Circle = ({color,className}) => {
+const Circle = ({color,onClick,className}) => {
 
     return <div 
-        className={`Circle ${color || 'transparent'} ${className || ''}`}    
+        className={`Circle ${color || 'transparent'} ${onClick ? 'pointer' : ''} ${className || ''}`}    
+        onClick={onClick}    
+
     />
 } 
 
