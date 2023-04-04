@@ -1,0 +1,14 @@
+.Circle {
+    width: 40px; 
+    aspect-ratio: 1/1; 
+    border-radius: 50%;
+}
+.Circle.pointer {
+    cursor: pointer;
+}
+.Circle.pointer:hover {
+    box-shadow: 0px 0px 0px 3px white;
+}
+.Circle.active {
+    border: 3px dashed white
+}
