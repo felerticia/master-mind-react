@@ -1,0 +1,26 @@
+.Rows {
+    grid-area: Rows;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Row {
+    display: grid;
+    grid-template-columns: 16% 60% 12%;
+    height: 60px;
+    justify-items: center;
+    align-items: center;
+    gap: 2%;  
+    cursor: not-allowed;  
+    pointer-events: none;
+}
+.Row.active {
+    border: 3px dashed white;
+    cursor: default;
+    pointer-events: all;
+}
+.Row > div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
