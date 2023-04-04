@@ -3,6 +3,7 @@ import { useReducer } from 'react';
 
 import AppContext from './contexts/Context'
 import { reducer } from './reducer/reducer'
+import { initGameState } from './helper';
 
 import Secret from './components/Secret/Secret'
 import Rows from './components/Rows/Rows'
@@ -11,7 +12,7 @@ import Buttons from './components/Buttons/Buttons'
 import GameEnds from './components/GameEnds/GameEnds'
 
 const App = () =>{
-    const [appState, dispatch ] = useReducer(reducer,{test : true});
+    const [appState, dispatch ] = useReducer(reducer,initGameState());
 
     return <AppContext.Provider value={[appState, dispatch]} >
     <div className="App">
