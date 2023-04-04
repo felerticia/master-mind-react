@@ -1,8 +1,9 @@
 import './Buttons.css'
+import Check from './Check'
 
 const Buttons = () => {
     return <div className="Buttons">
-        <button className="Button">Check</button> 
+        <Check/>
         <button className="Button">New Game</button> 
     </div> 
 }

@@ -6,7 +6,7 @@ import { setSlot } from '../../reducer/actions'
 
 const Rows = () => {
     const [ appState, dispatch ] = useAppContext()
-    const { rows, currentRow } = appState
+    const { rows, currentRow, hints } = appState
 
     const onClick = col => {
         dispatch(setSlot(col))
@@ -23,10 +23,10 @@ const Rows = () => {
                 <Circle color={rows[i][3]} onClick={() => i === currentRow && onClick(3)}/>
             </div>
             <div className='hints'>
-                <Circle />
-                <Circle />
-                <Circle />
-                <Circle />
+                <Circle color={hints[i][0]}/>
+                <Circle color={hints[i][1]}/>
+                <Circle color={hints[i][2]}/>
+                <Circle color={hints[i][3]}/>
             </div>
         </div>)
     }
