@@ -1,11 +1,15 @@
 import './Rows.css'
+import { useAppContext } from '../../contexts/Context'
+
 import Circle from '../Circle/Circle'
 
 const Rows = () => {
+    const [ appState ] = useAppContext()
+    const { currentRow } = appState
 
     return <div className="Rows">
     {new Array(10).fill()
-    .map ((x,i) => <div className={`Row`} key={i}>
+    .map ((x,i) => <div className={`Row ${i===currentRow ? 'active' : ''}`} key={i}>
             <div>{i+1}</div>
             <div className='circles'>
                 <Circle />
